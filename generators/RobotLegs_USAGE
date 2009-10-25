@@ -1,0 +1,92 @@
+Place the folders rlcommand, rlcontext, rlmediator, rlmodel, rlservce and rlview_with_mediator in your project in:
+/script/generators
+
+To create a new instance of a robotlegs class use:
+
+script/generate rlcommand package.className
+
+Available:
+rlcommand:  Extends org.robotlegs.mvcs.Command, creates empty .execute() function
+rlcontext:	Extends org.robotlegs.mvcs.Context, creates empty .startup() function
+rlmediator: Extends org.robotlegs.mvcs.Mediator, creates empty .onRegister() function, creates injected .view property (with placeholder class)
+rlmodel:    Extends org.robotlegs.mvcs.Model
+rlservice:  Extends org.robotlegs.mvcs.Service
+rlview_with_mediator creates MyView as specified, and also MyViewMediator (where MyView is your view class name):
+			view class extends flash.display.Sprite
+			mediator class extends org.robotlegs.mvcs.Mediator, creates empty onRegister() function, creates injected .view property of type MyView 
+
+All the above also create required test case classes and rebuild the test/AllTests.as file.
+
+-------------- COMMAND ---------------
+
+Example:
+    `./script/generate rlcommand com.company.projectname.controller.MyCommand`
+
+	Will create the follow files:
+	
+	    Class:			src/com/company/projectname/controller/MyCommand.as
+	    Test Case:		test/com/company/projectname/controller/MyCommandTest.as
+
+	    Test Suites:	test/AllTests.as
+
+-------------- CONTEXT ---------------
+	
+Example:
+   `./script/generate rlcontext com.company.projectname.MyContext`
+
+	Will create the follow files:
+
+	    Class:		src/com/company/projectname/MyContext.as
+	    Test Case:	test/com/company/projectname/MyContextTest.as
+
+	    Test Suites:		test/AllTests.as
+
+-------------- MEDIATOR ---------------
+	
+Example:
+    `./script/generate rlmediator com.company.projectname.view.MyViewMediator`
+
+	Will create the follow files:
+
+	    Mediator Class:		src/com/company/projectname/view/MyViewMediator.as
+	    Mediator Test Case:	test/com/company/projectname/view/MyViewMediatorTest.as
+
+	    Test Suites:		test/AllTests.as
+
+-------------- MODEL ---------------
+     
+Example:
+    `./script/generate rlmodel com.company.projectname.model.MyModel`
+
+	Will create the follow files:
+
+	    Class:			src/com/company/projectname/model/MyModel.as
+	    Test Case:		test/com/company/projectname/model/MyModelTest.as
+
+	    Test Suites:	test/AllTests.as
+
+-------------- SERVICE ---------------        
+	
+Example:
+    `./script/generate rlmodel com.company.projectname.service.MyService`
+
+	Will create the follow files:
+
+	    Class:			src/com/company/projectname/service/MyService.as
+	    Test Case:		test/com/company/projectname/service/MyServiceTest.as
+
+	    Test Suites:	test/AllTests.as
+
+-------------- VIEW WITH MEDIATOR ---------------
+                
+Example:
+    `./script/generate rlview_with_mediator com.company.projectname.view.MyView`
+
+	Will create the follow files:
+
+	    View Class:			src/com/company/projectname/view/MyView.as
+	    Mediator Class:		src/com/company/projectname/view/MyViewMediator.as 
+	    View Test Case:		test/com/company/projectname/view/MyViewTest.as
+	    Mediator Test Case:	test/com/company/projectname/view/MyViewMediatorTest.as
+
+	    Test Suites:		test/AllTests.as                 
