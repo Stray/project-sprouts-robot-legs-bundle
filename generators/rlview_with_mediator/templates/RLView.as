@@ -1,8 +1,10 @@
-package <%= package_name %> {
+package <%= package_name %> 
+{
 	
 	import flash.display.Sprite;
 	
-	public class <%= class_name %> extends Sprite {
+	public class <%= class_name %> extends Sprite 
+	{
 		
 		
 		//--------------------------------------------------------------------------
@@ -15,7 +17,8 @@ package <%= package_name %> {
 		 * 
 		 */
 		
-		public function <%= class_name %>() {			
+		public function <%= class_name %>() 
+		{			
 			
 		}
 		

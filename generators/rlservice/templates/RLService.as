@@ -1,16 +1,10 @@
-package <%= package_name %> {
+package <%= package_name %> 
+{
 	
-	import org.robotlegs.mvcs.Service;
+	import org.robotlegs.mvcs.Actor;
 	
-	public class <%= class_name %> extends Service{
-		
-		/* INHERITED INJECTIONS:
-		[Inject(name='mvcsEventDispatcher')]
-		public var eventDispatcher:IEventDispatcher;
-		
-		[Inject(name='mvcsEventMap')]
-		public var eventMap:IEventMap;
-		*/
+	public class <%= class_name %> extends Actor
+	{
 		
 		//--------------------------------------------------------------------------
 		//

@@ -1,10 +1,12 @@
-package <%= package_name %> {
+package <%= package_name %> 
+{
 	
 	import <%= package_name %>.<%= class_name %>;
 	
 	import org.robotlegs.mvcs.Mediator;
 	
-	public class <%= class_name %>Mediator extends Mediator {
+	public class <%= class_name %>Mediator extends Mediator 
+	{
 		
 		// declare the view to be injected
 		[Inject]
@@ -21,7 +23,8 @@ package <%= package_name %> {
 		 * 
 		 */
 		
-		public function <%= class_name %>Mediator() {			
+		public function <%= class_name %>Mediator() 
+		{			
 			// Try not to put stuff in the constructor of the mediator
 		}
 		
@@ -36,7 +39,7 @@ package <%= package_name %> {
 		 */
 		override public function onRegister():void
 		{			
-			//eventMap.mapListener(eventDispatcher, EventType.EVENT_NAME, eventHandlerFunction);
+			//eventMap.mapListener(eventDispatcher, EventType.EVENT_NAME, eventHandlerFunction, eventClass);
 		}
 		
 		//--------------------------------------------------------------------------

@@ -1,11 +1,13 @@
-package <%= package_name %> {
+package <%= package_name %> 
+{
 	
 	import flash.display.DisplayObjectContainer;
 	
 	import org.robotlegs.base.ContextEvent;
 	import org.robotlegs.mvcs.Context;
 	
-	public class <%= class_name %> extends Context {
+	public class <%= class_name %> extends Context 
+	{
 		
 		//--------------------------------------------------------------------------
 		//
@@ -24,7 +26,8 @@ package <%= package_name %> {
 		 *
 		 */
 		
-		public function <%= class_name %>(contextView:DisplayObjectContainer = null, autoStartup:Boolean = true) {
+		public function <%= class_name %>(contextView:DisplayObjectContainer = null, autoStartup:Boolean = true) 
+		{
 			
 			super(contextView, autoStartup);
 		
@@ -46,7 +49,7 @@ package <%= package_name %> {
 		override public function startup():void
 		{
 			// Map some Commands to Events
-			// commandMap.mapEvent(MyCommand, MyEvent.EVENT_NAME, MyEvent, isOneShot);
+			// commandMap.mapEvent(eventType, commandClass, eventClass, isOneShot);
 			
 			// Dependency injection for models, services and values
 			// injector.mapSingleton(whenAskedFor:Class, named:String = null);

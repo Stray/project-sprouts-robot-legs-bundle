@@ -1,4 +1,5 @@
-package {
+package 
+{
 	/**
 	 * This file has been automatically created using
 	 * #!/usr/bin/ruby script/generate suite
@@ -9,9 +10,11 @@ package {
 	import asunit.framework.TestSuite;<% test_case_classes.each do |test_case|  %>
 	import <%= test_case %>;<% end  %>
 
-	public class AllTests extends TestSuite {
+	public class AllTests extends TestSuite 
+	{
 
-		public function AllTests() {<% test_case_classes.each do |test_case|  %>
+		public function AllTests() 
+		{<% test_case_classes.each do |test_case|  %>
 			addTest(new <%= test_case %>());<% end  %>
 		}
 	}
