@@ -4,6 +4,8 @@ package <%= package_name %>
 	import asunit.framework.TestCase;
 	
 	import org.robotlegs.mvcs.Actor;
+	
+	import flash.events.EventDispatcher;
 
 	public class <%= test_case_name  %> extends TestCase 
 	{
@@ -18,6 +20,7 @@ package <%= package_name %>
 		{
 			super.setUp();
 			<%= instance_name %> = new <%= class_name %>();
+			<%= instance_name %>.eventDispatcher = new EventDispatcher();
 		}
 
 		override protected function tearDown():void 
@@ -31,9 +34,9 @@ package <%= package_name %>
 			assertTrue("<%= instance_name %> is <%= class_name %>", <%= instance_name %> is <%= class_name %>);
 		}
 		
-		public function testIsModel():void
+		public function testIsActor():void
 		{
-			assertTrue("<%= instance_name %> is robotlegs Model", <%= instance_name %> is Model);
+			assertTrue("<%= instance_name %> is robotlegs Actor", <%= instance_name %> is Actor);
 		}
 
 		public function testFailure():void 

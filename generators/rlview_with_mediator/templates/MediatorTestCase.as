@@ -5,6 +5,8 @@ package <%= package_name %>
 	
 	import org.robotlegs.mvcs.Mediator;
 
+	import flash.events.EventDispatcher;
+
 	public class <%= class_name  %>MediatorTest extends TestCase 
 	{
 		private var <%= instance_name %>Mediator:<%= class_name %>Mediator;
@@ -18,6 +20,9 @@ package <%= package_name %>
 		{
 			super.setUp();
 			<%= instance_name %>Mediator = new <%= class_name %>Mediator();
+			<%= instance_name %>Mediator.view = new <%= class_name %>();
+			<%= instance_name %>Mediator.eventDispatcher = new EventDispatcher();
+			<%= instance_name %>Mediator.onRegister();
 		}
 
 		override protected function tearDown():void 

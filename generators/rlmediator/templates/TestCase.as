@@ -4,6 +4,8 @@ package <%= package_name %>
 	import asunit.framework.TestCase;
 	
 	import org.robotlegs.mvcs.Mediator;
+	
+	import flash.events.EventDispatcher;
 
 	public class <%= test_case_name  %> extends TestCase 
 	{
@@ -18,6 +20,9 @@ package <%= package_name %>
 		{
 			super.setUp();
 			<%= instance_name %> = new <%= class_name %>();
+			<%= instance_name %>.view = new View();
+		    <%= instance_name %>.eventDispatcher = new EventDispatcher();
+		    <%= instance_name %>.onRegister();
 		}
 
 		override protected function tearDown():void 
